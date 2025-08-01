@@ -5,99 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Carlo Ponsica - Portfolio</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 <body>
   <canvas id="starfield"></canvas>
-  <header>
-    <h1 id="typewriter"></h1>
-    <p>Aspiring Software Engineer & IT Specialist</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-      <button id="theme-toggle">🌗</button>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Portfolio</div>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button></li>
+      </ul>
     </nav>
+    <div class="hero-content">
+      <img src="carlo_profile.png" alt="Carlo Ponsica" class="profile-pic-large">
+      <div>
+        <h1 class="typewriter">Hi, I'm Carlo Ponsica</h1>
+        <p class="subtitle">Aspiring Software Engineer & IT Specialist</p>
+        <div class="hero-socials">
+          <a href="mailto:it.Carloponsica@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://facebook.com/carlo.ponsica.5" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="CarloManiegoPonsica.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i></a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="about">
+    <section id="about" class="section">
       <h2>About Me</h2>
       <div class="about-wrapper">
-        <img src="carlo_profile.png" alt="Carlo Ponsica" class="profile-pic">
-        <p>I'm Carlo, a passionate IT graduate from Don Honorio Ventura State University. I have strong experience in computer maintenance, networking, and backend/frontend development. I'm always learning and pushing boundaries.</p>
+        <p>I'm Carlo, a passionate IT graduate from Don Honorio Ventura State University. I have strong experience in computer maintenance, networking, and backend/frontend development. I'm always learning and pushing boundaries. I love building things that make a difference and collaborating with others to solve real-world problems.</p>
       </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="section">
       <h2>Skills</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript, C++, Python, MySQL, Firebase</li>
-        <li>Adobe Photoshop, Illustrator, Canva</li>
-        <li>LAN/WAN Setup, Router Configuration, Windows OS</li>
+      <ul class="skills-list">
+        <li><i class="fab fa-html5"></i> HTML5</li>
+        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+        <li><i class="fab fa-js"></i> JavaScript</li>
+        <li><i class="fab fa-python"></i> Python</li>
+        <li><i class="fas fa-database"></i> MySQL, Firebase</li>
+        <li><i class="fab fa-cuttlefish"></i> C++</li>
+        <li><i class="fas fa-paint-brush"></i> Photoshop, Illustrator, Canva</li>
+        <li><i class="fas fa-network-wired"></i> LAN/WAN, Router Config, Windows OS</li>
       </ul>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="section">
       <h2>Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>This personal portfolio you're browsing now — designed to grow with my career!</p>
+          <img src="assets/portfolio.png" alt="Portfolio Website" class="project-img">
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>This personal portfolio you're browsing now — designed to grow with my career!</p>
+            <a href="#" class="btn" disabled>Current Site</a>
+          </div>
         </div>
-      
-<div class="project-card">
-  <h3>Weather App 🌤️</h3>
-  <p>Real-time weather with 5-day forecast and location detection.</p>
-  <a href="projects/weather/index.html" target="_blank">🔗 View Project</a>
-</div>
-
-      
-<div class="project-card">
-  <h3>Firebase Chat 💬</h3>
-  <p>Realtime chat using Firebase Realtime Database with zero backend setup.</p>
-  <a href="projects/chat/index.html" target="_blank">🔗 View Chat App</a>
-</div>
-
+        <div class="project-card">
+          <img src="assets/weather.png" alt="Weather App" class="project-img">
+          <div class="project-info">
+            <h3>Weather App <span>🌤️</span></h3>
+            <p>Real-time weather with 5-day forecast and location detection.</p>
+            <a href="projects/weather/index.html" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="assets/chat.png" alt="Firebase Chat" class="project-img">
+          <div class="project-info">
+            <h3>Firebase Chat <span>💬</span></h3>
+            <p>Realtime chat using Firebase Realtime Database with zero backend setup.</p>
+            <a href="projects/chat/index.html" target="_blank" class="btn">View Chat App</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="section">
       <h2>Experience</h2>
-      <p><strong>Dashcam Reviewer</strong> – Mindbridge Resource Corp. (2023–Present)</p>
-      <ul>
-        <li>Monitor GPS trackers and detect suspicious activities</li>
-        <li>Write detailed incident reports</li>
-        <li>Operate dashcams, surveillance, and GPS systems</li>
-      </ul>
-      <p><strong>Intern – IT Department</strong> – PELCO III (2023)</p>
-      <ul>
-        <li>Computer and printer maintenance</li>
-        <li>Network installation and troubleshooting</li>
-        <li>Helpdesk support</li>
-      </ul>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Dashcam Reviewer</h3>
+            <span>Mindbridge Resource Corp. (2023–Present)</span>
+            <ul>
+              <li>Monitor GPS trackers and detect suspicious activities</li>
+              <li>Write detailed incident reports</li>
+              <li>Operate dashcams, surveillance, and GPS systems</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Intern – IT Department</h3>
+            <span>PELCO III (2023)</span>
+            <ul>
+              <li>Computer and printer maintenance</li>
+              <li>Network installation and troubleshooting</li>
+              <li>Helpdesk support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="education">
+    <section id="education" class="section">
       <h2>Education</h2>
-      <p><strong>BS in Information Technology</strong> – Don Honorio Ventura State University, 2019–2023</p>
-      <p><strong>SHS – ICT Strand</strong> – STI College San Fernando, 2017–2019</p>
+      <div class="education-list">
+        <div>
+          <h3>BS in Information Technology</h3>
+          <span>Don Honorio Ventura State University, 2019–2023</span>
+        </div>
+        <div>
+          <h3>SHS – ICT Strand</h3>
+          <span>STI College San Fernando, 2017–2019</span>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section">
       <h2>Contact Me</h2>
-      <p><strong>it.Carloponsica@gmail.com</strong> </p>
-        <p><strong>https://facebook.com/carlo.ponsica.5</strong></p>
-        <p><strong>09682458087</strong></p>
+      <div class="contact-cards">
+        <a href="mailto:it.Carloponsica@gmail.com" class="contact-card"><i class="fas fa-envelope"></i> it.Carloponsica@gmail.com</a>
+        <a href="https://facebook.com/carlo.ponsica.5" target="_blank" class="contact-card"><i class="fab fa-facebook"></i> facebook.com/carlo.ponsica.5</a>
+        <div class="contact-card"><i class="fas fa-phone"></i> 0968 245 8087</div>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>© 2025 Carlo Ponsica</p>
-    <p><a href="CarloManiegoPonsica.pdf" target="_blank">📄 Download Resume</a></p>
+    <p><a href="CarloManiegoPonsica.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download Resume</a></p>
   </footer>
 
   <script src="js/scripts.js"></script>
